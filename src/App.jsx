@@ -4,7 +4,9 @@ import './App.css'
 
 function App() {
   const [text, setText] = useState("");
+  const [writePrompt, setWritePrompt] = useState("");
   const [loading, setLoading] = useState(false);
+  const [feedback, setFeedback] = useState("");
 
   // This part is for the possible backend. 
   const handleSubmit = async () => {
@@ -29,11 +31,27 @@ function App() {
 
   // This is for simulating a call to backend. 
   const handleButtonClick = () => {
+    // Check if text area is empty
+    if (text.trim() === "") {
+      setWritePrompt("Please provide some feedback.");
+      // Exit if no text is given
+      return;
+    }
+    // Clear previous prompts if text is not empty
+    setWritePrompt("");
+
     setLoading(true);
+
     setTimeout(() => {
-      setLoading(false);
+      setLoading(false)
+
+      // Randomize result
+      const results = ["Positive", "Neutral", "Negative"];
+      const randomResult = results[Math.floor(Math.random() * results.length)];
+
+      // Set feedback state
+      setFeedback(randomResult);
     }, 2000);
-    alert("Evaluation: Positive")
   }
 
   return (
@@ -47,12 +65,22 @@ function App() {
       />
       {/* <button onClick={handleSubmit}>Send</button> */}
 
+      {writePrompt && <div className="writePrompt">{writePrompt}</div>} {/* Display prompt message */}
+
       <div>
         <button onClick={handleButtonClick} disabled={loading}>
           {loading ? <BounceLoader size={20} /> : 'Load results'}
         </button>
       </div>
 
+      {feedback && (
+        <div
+          className={`feedback ${feedback === "Positive" ? "feedback-positive" :
+            feedback === "Neutral" ? "feedback-neutral" : "feedback-negative"}`}
+        >
+          Evaluation: {feedback}
+        </div>
+      )}
     </div>
   );
 }
