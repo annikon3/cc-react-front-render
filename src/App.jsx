@@ -8,7 +8,7 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [feedback, setFeedback] = useState("");
 
-  // This part is for the possible backend. 
+  // This part is for the possible backend! Not in use right now. 
   const handleSubmit = async () => {
     try {
       const response = await fetch("http://localhost:5000/process", {
@@ -41,7 +41,6 @@ function App() {
     setWritePrompt("");
 
     setLoading(true);
-
     setTimeout(() => {
       setLoading(false)
 
@@ -65,7 +64,7 @@ function App() {
       />
       {/* <button onClick={handleSubmit}>Send</button> */}
 
-      {writePrompt && <div className="writePrompt">{writePrompt}</div>} {/* Display prompt message */}
+      {writePrompt && <div className="writePrompt">{writePrompt}</div>}
 
       <div>
         <button onClick={handleButtonClick} disabled={loading}>
@@ -75,8 +74,13 @@ function App() {
 
       {feedback && (
         <div
-          className={`feedback ${feedback === "Positive" ? "feedback-positive" :
-            feedback === "Neutral" ? "feedback-neutral" : "feedback-negative"}`}
+          className={`feedback ${
+            feedback === "Positive" 
+            ? "feedback-positive" 
+            : feedback === "Neutral" 
+            ? "feedback-neutral" 
+            : "feedback-negative"
+          }`}
         >
           Evaluation: {feedback}
         </div>

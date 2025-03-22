@@ -18,6 +18,7 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
+  transition: transform 0.3s ease-in-out;
 }
 
 h1 {
@@ -102,6 +103,7 @@ button:hover {
 
   .container {
     padding: 10px;
+    overflow-y: auto; 
   }
 }
 
@@ -122,6 +124,7 @@ button:hover {
 
   .container {
     padding: 15px;
+    overflow-y: auto; 
   }
 }
 
