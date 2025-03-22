@@ -1,69 +1,26 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.notebook-container {
+.container {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 10px;
-  padding: 10px;
+  padding: 20px;
 }
 
-.output-container {
-  background: #e8f5e9; 
-  color: #2e7d32; 
+textarea {
+  width: 80%;
   padding: 10px;
-  border-radius: 5px;
-  margin-top: 5px;
-  font-family: monospace;
-}
-
-.thebe-cell {
-  background: black;
-  padding: 10px;
-  border-radius: 5px;
-}
-
-/* Style for Markdown Cells */
-.markdown-cell {
-  padding: 15px;
-  border-radius: 5px;
-  font-family: Arial, sans-serif;
   font-size: 16px;
 }
 
-/* Style for Code Cells */
-.code-cell {
-  background: #f8f8f8; 
-  padding: 15px;
-  border-radius: 5px;
-}
-
-/* Code Block Styling */
-.code-cell pre {
-  background: #2d2d2d; 
-  color: #ffffff;
-  padding: 10px;
-  border-radius: 5px;
-  overflow-x: auto;
-}
-
-/* Button Styling */
-.thebe-execute-button {
-  background: #007bff;
+button {
+  background-color: #007bff;
   color: white;
+  padding: 10px 15px;
   border: none;
-  padding: 8px;
-  margin-top: 5px;
   cursor: pointer;
-  border-radius: 4px;
-  width: 100%;
-  font-size: 14px;
+  font-size: 16px;
 }
 
-.thebe-execute-button:hover {
-  background: #0056b3;
+button:hover {
+  background-color: #0056b3;
 }
