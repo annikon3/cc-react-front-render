@@ -1,26 +1,137 @@
+/* General styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  height: 100vh;
+}
+
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 20px;
+}
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  color: white;
+  margin-bottom: 20px;
 }
 
 textarea {
   width: 80%;
   padding: 10px;
-  font-size: 16px;
+  font-size: 1rem;
+  border: 1px solid #cccccc76;
+  border-radius: 4px;
+  resize: none;
 }
 
 button {
+  width: 100%;
   background-color: #007bff;
   color: white;
   padding: 10px 15px;
   border: none;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
 }
 
 button:hover {
   background-color: #0056b3;
+}
+
+/* Feedback result styles */
+.feedback {
+  padding: 10px;
+  margin-top: 10px;
+  border: 2px solid;
+}
+
+.feedback-positive {
+  color: green;
+  border-color: green;
+}
+
+.feedback-neutral {
+  color: white;
+  border-color: white;
+}
+
+.feedback-negative {
+  color: red;
+  border-color: red;
+}
+
+.writePrompt {
+  color: red;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* Mobile devices (less than 600px) */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  textarea {
+    font-size: 1rem;
+    padding: 8px;
+  }
+
+  button {
+    font-size: 1rem;
+    padding: 12px;
+  }
+
+  .container {
+    padding: 10px;
+  }
+}
+
+/* Tablets (600px to 900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  textarea {
+    font-size: 1.1rem;
+  }
+
+  button {
+    font-size: 1.1rem;
+    padding: 12px;
+  }
+
+  .container {
+    padding: 15px;
+  }
+}
+
+/* Large screens (larger than 900px) */
+@media (min-width: 901px) {
+  .container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
 }
