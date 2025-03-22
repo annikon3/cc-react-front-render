@@ -5,38 +5,65 @@
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.notebook-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.output-container {
+  background: #e8f5e9; 
+  color: #2e7d32; 
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 5px;
+  font-family: monospace;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.thebe-cell {
+  background: black;
+  padding: 10px;
+  border-radius: 5px;
 }
 
-.card {
-  padding: 2em;
+/* Style for Markdown Cells */
+.markdown-cell {
+  padding: 15px;
+  border-radius: 5px;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
 }
 
-.read-the-docs {
-  color: #888;
+/* Style for Code Cells */
+.code-cell {
+  background: #f8f8f8; 
+  padding: 15px;
+  border-radius: 5px;
+}
+
+/* Code Block Styling */
+.code-cell pre {
+  background: #2d2d2d; 
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+/* Button Styling */
+.thebe-execute-button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 8px;
+  margin-top: 5px;
+  cursor: pointer;
+  border-radius: 4px;
+  width: 100%;
+  font-size: 14px;
+}
+
+.thebe-execute-button:hover {
+  background: #0056b3;
 }
