@@ -3,6 +3,7 @@ import { BounceLoader } from 'react-spinners'
 import './App.css'
 
 function App() {
+  const token = import.meta.env.VITE_API_TOKEN;
   const [text, setText] = useState("");
   const [writePrompt, setWritePrompt] = useState("");
   const [loading, setLoading] = useState(false);
@@ -22,7 +23,7 @@ function App() {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "Authorization": `Bearer ${process.env.REACT_APP_API_TOKEN}`,
+          "Authorization": `Bearer ${token}`,
         },
         body: JSON.stringify({ text }),
       });
