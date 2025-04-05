@@ -19,7 +19,7 @@ function App() {
     setFeedback("");
 
     try {
-      const response = await fetch("https://cc-module-4-backend-open-cloud-computing-2025-spring.2.rahtiapp.fi", {
+      const response = await fetch("https://cc-module-4-backend-open-cloud-computing-2025-spring.2.rahtiapp.fi/sentiment", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
