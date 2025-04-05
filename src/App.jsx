@@ -61,9 +61,9 @@ function App() {
       {feedback && (
         <div
           className={`feedback ${
-            feedback === "Positive" 
+            feedback === "positive" 
             ? "feedback-positive" 
-            : feedback === "Neutral" 
+            : feedback === "neutral" 
             ? "feedback-neutral" 
             : "feedback-negative"
           }`}

@@ -59,30 +59,47 @@ button:hover {
 
 /* Feedback result styles */
 .feedback {
-  padding: 10px;
-  margin-top: 10px;
-  border: 2px solid;
+  padding: 20px;
+  margin-top: 20px;
+  border: 5px solid;
+  border-radius: 10px;
+  font-weight: bold;
+  text-align: center;
+  width: fit-content;
+  min-width: 200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .feedback-positive {
-  color: green;
-  border-color: green;
+  background-color: #e6ffed;
+  color: #1a7f37;
+  border-color: #1a7f37;
 }
 
 .feedback-neutral {
-  color: white;
-  border-color: white;
+  background-color: #f0f0f0;
+  color: #555;
+  border-color: #aaa;
 }
 
 .feedback-negative {
-  color: red;
-  border-color: red;
+  background-color: #ffe6e6;
+  color: #d32f2f;
+  border-color: #d32f2f;
 }
 
 .writePrompt {
-  color: red;
-  margin-top: 10px;
-  font-size: 14px;
+  padding: 5px;
+  border: 2px solid;
+  border-radius: 10px;
+  text-align: center;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #ffe6e6;
+  color: #d32f2f;
+  margin: 10px;
 }
 
 /* Mobile devices (less than 600px) */
